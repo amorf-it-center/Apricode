@@ -20,24 +20,47 @@ button {
 }
 
 /*FONTS*/
-@import url(fonts_rus/stylesheet.css);
-
-.kioma {
-    font-family: 'OnePlusOne 2015';
+@font-face {
+    font-family: 'Impact';
+    src: url('fonts/Impact.eot');
+    src: url('fonts/Impact.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Impact.woff') format('woff'),
+        url('fonts/Impact.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont-ExtraLightDEMO';
+    src: url('fonts/Mont-ExtraLightDEMO.eot');
+    src: url('fonts/Mont-ExtraLightDEMO.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Mont-ExtraLightDEMO.woff') format('woff'),
+        url('fonts/Mont-ExtraLightDEMO.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OnePlusOne 2015';
+    src: url('fonts/OnePlusOne2015-Regular.eot');
+    src: url('fonts/OnePlusOne2015-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/OnePlusOne2015-Regular.woff') format('woff'),
+        url('fonts/OnePlusOne2015-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.kioma {
+    font-family: 'Mont ExtraLight DEMO', sans-serif;
+
 }
 
 .swis {
-    font-family: 'Mont ExtraLight DEMO';
-    font-weight: 300;
-    font-style: normal;
+    font-family: 'OnePlusOne 2015', sans-serif;
+
 }
 
 .impact {
-    font-family: 'Impact';
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Impact', sans-serif;
 }
 
 /*COLORS*/
@@ -101,12 +124,13 @@ button {
                 color: @section_bkg;
                 font-size: 11px;
                 text-transform: uppercase;
+                .kioma;
 
                 &:last-child {
                     margin-right: 0;
                 }
 
-                .kioma;
+
                 letter-spacing: 2px;
                 transition: 0.7s;
 
@@ -343,8 +367,8 @@ button {
             text-transform: uppercase;
             color: @section_bkg;
             font-size: 11px;
-            font-weight: 100;
             letter-spacing: 3px;
+            .kioma;
 
             &::before {
                 content: '';
