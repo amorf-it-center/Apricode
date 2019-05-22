@@ -2,7 +2,7 @@
 #container {
   position: absolute;
   width: 100%;
-  height: 790px;
+  height: 760px;
   z-index: -1;
   overflow: hidden;
 }
