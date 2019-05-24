@@ -4,11 +4,11 @@ jQuery(document).ready(function ($) {
 
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 680) {
-            $(".ggg").addClass("active fixed");
+            $(".nav_width").addClass("active fixed");
 
         } else {
             //remove the background property so it comes transparent again (defined in your css)
-            $(".ggg").removeClass("active fixed");
+            $(".nav_width").removeClass("active fixed");
 
         }
     });
