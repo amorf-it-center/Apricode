@@ -1,5 +1,4 @@
 /* General */
-
 body {
     padding: 0;
     margin: 0;
@@ -159,6 +158,7 @@ button {
 
 .active .navbar {
     padding: 15px 0 15px 0;
+
     img {
         width: 54px;
     }
@@ -166,6 +166,7 @@ button {
 
 /*SLIDE SHOW */
 @import url(css/style2.css);
+
 #container {
     #slides {
         img {
@@ -175,26 +176,18 @@ button {
         .slide {
             .shaurma {
                 position: relative;
-
+                padding-left: 130px;
                 .title {
                     position: absolute;
-                    top: calc(31% + 0.03em);
-                    left: 15%;
                     z-index: 2;
-                    font-size: 90px;
                     color: @text_dark;
                     text-transform: capitalize;
                     overflow: hidden;
                     .impact;
-                    line-height: 200px;
                 }
 
                 .title-top {
                     position: absolute;
-                    left: 14%;
-                    top: 36%;
-                    font-size: 15px;
-                    margin-left: 10px;
                     letter-spacing: 3px;
                     text-transform: uppercase;
                     .MontExtraLight;
@@ -204,21 +197,15 @@ button {
 
                 .title-bottom {
                     position: absolute;
-                    bottom: calc(30% - 0.01em);
-                    left: calc(14% + 0.06em);
                     z-index: 2;
                     text-transform: uppercase;
-                    font-size: 90px;
                     color: @text_dark;
                     overflow: hidden;
                     .impact;
-                    line-height: 180px;
 
                     .ump {
                         color: @main_color;
                         .impact;
-                        font-size: 115px;
-                        line-height: 200px;
                     }
                 }
             }
@@ -228,17 +215,16 @@ button {
 
 /* HOME SECTION*/
 .home-section {
-    height: 760px;
     position: relative;
+    min-height: 100vh;
 
     .slide_btn {
         position: absolute;
-        display: inline-block;
-        bottom: 90px;
-        right: 0;
+        bottom: 80px;
+        right: 20px;
         z-index: 1000;
         font-size: 20px;
-
+        
         span {
             color: @section_bkg;
         }
@@ -277,12 +263,12 @@ button {
             &:hover {
                 &::before {
                     border-color: @main_color;
-                    transform: translate(92%, -50%) rotate(-45deg);
+                    transform: translate(20%, -50%) rotate(-45deg);
                 }
 
                 span {
                     &::after {
-                        width: 30px;
+                        width: 20px;
                         background-color: @main_color;
                         left: 100%;
                     }
@@ -325,12 +311,12 @@ button {
             &:hover {
                 &::before {
                     border-color: @main_color;
-                    transform: translate(-180%, -50%) rotate(-45deg);
+                    transform: translate(-110%, -50%) rotate(-45deg);
                 }
 
                 span {
                     &::after {
-                        width: 30px;
+                        width: 20px;
                         background-color: @main_color;
                         right: 100%;
                     }
@@ -340,46 +326,45 @@ button {
 
         }
     }
-    .follow_us {
-        position: absolute;
-        top: 0;
-        left: calc(-2% - 0.1em);
-        z-index: 10;
-        height: 790px;
 
+    .follow_us {
+        z-index: 10;
         .social-title {
-            position: relative;
-            top: 200px;
+            position: absolute;
+            left: calc(-2% - 0.1em);
+            top: 26%;
             transform: rotate(90deg);
         }
 
         h3 {
+            position: relative;
             text-transform: uppercase;
             color: @section_bkg;
-            font-size: 11px;
+            font-size: 10px;
             letter-spacing: 3px;
             .MontExtraLight;
 
             &::before {
                 content: '';
-                height: 0.5px;
-                width: 175px;
+                height: 1px;
+                min-width: 160px;
                 background-color: @main_color;
                 display: block;
                 align-content: center;
                 position: absolute;
                 top: 50%;
-                left: 155px;
+                left: 175px;
             }
         }
 
         .social {
-            position: relative;
-            top: 57%;
-
+            position: absolute;
+            bottom: 10%;
+            left: calc(3% + 0.4em);
+            display: inline-block;
             svg {
                 fill: @section_bkg;
-                width: 20px;
+                width: 18px;
                 height: auto;
                 transform: scale(1);
                 transition: 0.2s;
@@ -392,15 +377,103 @@ button {
             }
 
             ul {
-                list-style: none;
                 padding: 0;
                 margin: 0;
-                text-align: center;
-
+                list-style: none;
                 li {
-                    padding-bottom: 18px;
+                    padding-bottom: 12px;
                 }
             }
+        }
+    }
+}
+
+/*Media of Slide Show */
+@media (max-width: 768px) {
+    #container {
+        .shaurma {
+            padding-left: 100px !important;
+            .title {
+                top: 37%;
+                font-size: 30px;
+            }
+
+            .title-top {
+                letter-spacing: 2px !important;
+                top: 35%;
+                font-size: 9px;
+            }
+
+            .title-bottom {
+                top: 38%;
+                font-size: 25px;
+                line-height: 80px;
+
+                .ump {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    #container {
+        .shaurma {
+            .title {
+                top: 41%;
+                font-size: 55px;
+                //line-height: 200px;
+            }
+
+            .title-top {
+                top: 39%;
+                font-size: 11px;
+            }
+
+            .title-bottom {
+                top: calc(40% - 0.01em);
+                font-size: 50px;
+                line-height: 180px;
+
+                .ump {
+                    font-size: 65px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #container {
+        .shaurma {
+            .title {
+                top: 37%;
+                font-size: 85px;
+            }
+
+            .title-top {
+                top: 36%;
+                font-size: 13px;
+            }
+
+            .title-bottom {
+                top: 42%;
+                font-size: 80px;
+                line-height: 180px;
+
+                .ump {
+                    font-size: 95px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .home-section {
+        .follow_us {
+            display: none;
         }
     }
 }
